@@ -1,0 +1,60 @@
+html
+  box-sizing: border-box
+
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+\:focus, \:active
+  outline: 0
+
+a
+  color: inherit
+  text-decoration: none
+
+h1, h2, h3, h4, h5, h6, ul, p
+  padding: 0
+  margin: 0
+
+ul
+  list-style: none
+
+img
+  max-width: 100%
+  display: block
+
+b
+  font-weight: 700
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+  -webkit-appearance: none
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus
+  appearance: none
+  -moz-appearance: textfield
+
+
+body
+  font-family: 'Montserrat', sans-serif
+  font-weight: 400
+  font-size: 16px
+  color: $color-black
+  min-width: 375px
+  position: relative
+
+.wrapper
+  width: 100%
+  margin: 0 auto
+  overflow: hidden
+
+.container
+  max-width: 1240px
+  padding: 0 10px
+  width: 100%
+  margin: 0 auto
+  position: relative
+  z-index: 5

@@ -1,0 +1,32 @@
+{% set site_title = site_title | default('Title') %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="language" content="Russian">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="cmsmagazine" content="7a916982225f80c18acab18934b706a8" />
+  <title>{{ site_title }}</title>
+  <link rel="stylesheet" href="css/main.min.css?v=hash">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    {% include "common/_header.html" %}
+
+    {% block content %}{% endblock %}
+
+    {% include "common/_footer.html" %}
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/libs.min.js?v=hash"></script>
+  <script src="js/common.min.js?v=hash"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Главная' %}
+{% set home = true %}
+
+{% block content %}
+
+<section class="promo">
+  <div class="container">
+    <div class="promo-content">
+      <div class="promo-text">
+        <h1 class="title-lg">Студия света в Санкт-Петербурге</h1>
+        <h2 class="title-sm">Подберём и доставим световые решения для вашего проекта</h2>
+      </div>
+      <div class="promo-img">
+        <img src="img/promo-img-1.jpg" alt="" data-id="1" class="active">
+        <img src="img/promo-img-2.jpg" alt="" data-id="2">
+        <img src="img/promo-img-3.jpg" alt="" data-id="3">
+      </div>
+      <div class="promo-right">
+        <ul class="promo-list">
+          <li data-id="1" class="active"><a href="#">Интерьерный свет</a></li>
+          <li data-id="2"><a href="#">Трековые системы</a></li>
+          <li data-id="3"><a href="#">Светодиодные ленты<br> и аксессуары</a></li>
+        </ul>
+        <div class="btn-wrap"><a href="#" class="btn btn-yellow">Смотреть весь каталог</a></div>
+      </div>
+    </div>
+    {% include 'common/promo-section.html' %}
+  </div>
+</section>
+
+<section class="design">
+  <div class="container">
+    <img src="img/design-lamp.jpg" alt="" class="design-lamp">
+    {% include 'common/design-content.html' %}
+  </div>
+</section>
+
+<section class="trend">
+  <div class="container">
+    <h2 class="title-lg">Тренды в светодизайне квартир</h2>
+    <ul class="item-tabs">
+      <li class="active">Трековые системы</li>
+      <li>Декоративные</li>
+      <li>Встроенные</li>
+      <li>Треки и компоненты трековой системы</li>
+    </ul>
+    <div class="item-carousel trend-carousel">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">{% include 'common/item-card.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item-card.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item-card.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item-card.html' %}</div>
+      </div>
+    </div>
+    <div class="item-carousel__control">
+      <div class="item-arrow trend-prev"></div>
+      <div class="item-arrow trend-next"></div>
+    </div>
+    <div class="btn-wrap"><a href="#" class="btn btn-gray">Смотреть больше</a></div>
+  </div>
+</section>
+
+<section class="interior">
+  <div class="container">
+    <h2 class="title-lg">Новые интерьерные решения</h2>
+    <ul class="item-tabs">
+      <li class="active">Трековые системы</li>
+      <li>Декоративные</li>
+      <li>Встроенные</li>
+      <li>Треки и компоненты трековой системы</li>
+    </ul>
+    <div class="item-carousel interior-carousel">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">{% include 'common/item-card.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item-card.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item-card.html' %}</div>
+        <div class="swiper-slide">{% include 'common/item-card.html' %}</div>
+      </div>
+    </div>
+    <div class="item-carousel__control">
+      <div class="item-arrow interior-prev"></div>
+      <div class="item-arrow interior-next"></div>
+    </div>
+    <div class="btn-wrap"><a href="#" class="btn btn-gray">Смотреть больше</a></div>
+  </div>
+</section>
+
+<section class="preliminary">
+  <div class="container">
+    <div class="preliminary-content">
+      <h2 class="title-lg">Произведём предварительный расчет освещённости</h2>
+      <p class="title-sm">Расчет освещённости поможет исключить затемненные и избыточно освещённые зоны в помещении</p>
+      <div class="btn-wrap"><a href="#" class="btn btn-yellow">Подробнее</a></div>
+    </div>
+    <img src="img/preliminary-lamp.jpg" alt="" class="preliminary-lamp">
+  </div>
+</section>
+
+<section class="lamp">
+  <div class="container">
+    <img src="img/lamp-item.jpg" alt="" class="lamp-items">
+    <div class="lamp-content">
+      <h2 class="title-lg">Не нашли нужный светильник?</h2>
+      <p class="title-sm">Сделаем индивидуальный заказ или создадим эксклюзивный светильник по вашим характеристикам.<br> Оставьте заявку. Мы найдем решение и свяжемся с вами!</p>
+      <div class="btn-wrap"><a href="javascript:;" data-fancybox data-src="#popup-help" class="btn btn-yellow">Светильник под заказ</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio">
+  <div class="container">
+    <div class="portfolio-content">
+      <h2 class="title-lg">Портфолио</h2>
+      <p class="title-sm">Освещение для ЖК Сосновка  2021 год</p>
+      <p class="title-xs">Можно мини текст описание. Сделаем индивидуальный заказ или создадим эксклюзивный светильник по вашим характеристикам.</p>
+      <div class="portfolio-control">
+        <div class="item-arrow portfolio-prev"></div>
+        <div class="item-arrow portfolio-next"></div>
+      </div>
+      <div class="btn-wrap"><a href="#" class="btn btn-gray">Смотреть портфолио</a></div>
+    </div>
+    <div class="portfolio-gallery">
+      <div class="portfolio-gallery__main">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/gallery.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/gallery.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/gallery.jpg" alt=""></div>
+        </div>
+      </div>
+      <div class="portfolio-gallery__thumb">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/gallery.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/gallery.jpg" alt=""></div>
+          <div class="swiper-slide"><img src="img/gallery.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="help">
+  <div class="container">
+    <img src="img/help-lamp.jpg" alt="" class="help-lamp">
+    <div class="help-content">
+      <h2 class="title-lg">Как выбрать комфортное освещение в помещении?</h2>
+      <p class="title-sm">1000 квартир освещены под нашим руководством. Правильно подобранный свет сделает помещение уютным и функциональным.<br> Оставьте заявку. Мы свяжемся с вами в течение 1 часа и подберем оптимальное решение! </p>
+      <div class="btn-wrap"><a href="javascript:;" data-fancybox data-src="#popup-design" class="btn btn-yellow">Помощь в подборе</a></div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
