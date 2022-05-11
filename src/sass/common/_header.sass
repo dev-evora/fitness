@@ -1,5 +1,12 @@
 .header
   padding: 40px 0
+  &.fixed
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
+    z-index: 10
   &-row
     @include flexbox
     align-items: center
@@ -114,8 +121,10 @@
       align-items: center
       font-size: 12px
       color: #9b9b9b
+      margin-top: -15px
       li
         margin-right: 15px
+        margin-top: 15px
         a
           transition: .2s
           &:hover
