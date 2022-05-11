@@ -1,0 +1,123 @@
+.header
+  padding: 40px 0
+  background: #eee
+  &-row
+    @include flexbox
+    align-items: center
+    margin-top: 20px
+    &:first-child
+      margin-top: 0
+  &-content
+    max-width: 1000px
+    width: 100%
+    margin-left: auto
+    @include flexbox
+    align-items: center
+    justify-content: space-between
+  &-nav
+    @include flexbox
+    align-items: center
+    li
+      margin-right: 40px
+      &:last-child
+        margin-right: 0
+      a
+        transition: .2s
+        &:hover
+          color: $color-purple
+  &-social
+    @include flexbox
+    align-items: center
+    li
+      margin-right: 20px
+      &:last-child
+        margin-right: 0
+  &-city
+    @include flexbox
+    align-items: center
+    cursor: pointer
+    &::after
+      content: ''
+      display: block
+      width: 14px
+      height: 8px
+      margin-left: 10px
+      background: url(../img/svg/city-arrow.svg) no-repeat
+  &-login
+    border: 1px solid $color-queen-blue
+    color: $color-queen-blue
+    font-size: 12px
+    padding: 12px 14px
+    border-radius: 30px
+    cursor: pointer
+    &:hover
+      background: $color-queen-blue
+      color: #fff
+  &-search
+    &__form
+      background: #fff
+      border-radius: 100px
+      height: 50px
+      width: 100%
+      @include flexbox
+      align-items: center
+      padding: 4px
+    &__input
+      flex: 1
+      height: 100%
+      border-radius: 50px
+      margin-right: 15px
+      padding-left: 20px
+      border: 0
+      @include placeholder
+        color: #c9c9c9
+    &__btn
+      height: 100%
+      @include flexbox
+      align-items: center
+      padding: 0 20px
+      background: $color-purple
+      color: #fff
+      border: 0
+      border-radius: 50px
+      cursor: pointer
+      &::before
+        content: ''
+        display: block
+        width: 16px
+        height: 16px
+        margin-right: 10px
+        background: url(../img/svg/search-icon.svg) no-repeat
+    &__online
+      display: block
+      margin-right: 15px
+      cursor: pointer
+      input
+        @include visually-hidden
+        &:checked + p::before
+          background: $color-purple
+      p
+        @include flexbox
+        align-items: center
+        &::before
+          content: ''
+          width: 12px
+          height: 12px
+          border-radius: 2px
+          display: block
+          background: #fff
+          border: 1px solid #D2D2D2
+          box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.07), inset 0 0 0 2px #fff
+          margin-right: 10px
+          transition: .2s
+    &__fav
+      @include flexbox
+      align-items: center
+      font-size: 12px
+      color: #9b9b9b
+      li
+        margin-right: 15px
+        a
+          transition: .2s
+          &:hover
+            color: $color-queen-blue
