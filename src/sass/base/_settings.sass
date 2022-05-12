@@ -73,12 +73,30 @@ body
   align-items: center
 
 .btn
-  display: block
+  @include flexbox
+  align-items: center
   padding: 18px 45px
   border-radius: 50px
+  transition: .2s
+  img
+    margin-right: 20px
   &-purple
     background: $color-purple
     color: #fff
   &-outline
     color: $color-queen-blue
     border: 1px solid $color-queen-blue
+  &-tg
+    color: #0088CC
+    border: 1px solid #0088CC
+    padding: 16px 35px
+    &:hover
+      background: #08c
+      color: #fff
+
+.title-xl
+  font-size: 48px
+  font-weight: 500
+.title-xs
+  font-size: 14px
+  font-weight: 500
