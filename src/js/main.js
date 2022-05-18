@@ -94,6 +94,16 @@ createSwiper('.find-dir', {
   spaceBetween: 20,
 });
 
+createSwiper('.popular-slider', {
+  slidesPerGroup: 4,
+  slidesPerView: 4,
+  grid: {
+    rows: 2,
+    fill: 'row',
+  },
+  spaceBetween: 20,
+});
+
 $('.find-tags li').click(function () {
   $('.find-tags li').removeClass('active');
   $(this).addClass('active');
