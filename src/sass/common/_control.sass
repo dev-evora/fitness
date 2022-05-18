@@ -1,0 +1,22 @@
+.control
+  @include flexbox
+  align-items: center
+  justify-content: flex-end
+  margin-top: 40px
+  &-prev, &-next
+    width: 23px
+    height: 7px
+    display: block
+    cursor: pointer
+    background: url(../img/svg/control-arrow.svg) no-repeat
+    filter: invert(44%) sepia(5%) saturate(5207%) hue-rotate(161deg) brightness(87%) contrast(74%)
+    &:hover
+      filter: invert(16%) sepia(43%) saturate(5454%) hue-rotate(266deg) brightness(96%) contrast(94%)
+  &-prev
+    transform: rotate(180deg)
+  &-count
+    // margin: 0 30px
+    text-align: center
+    color: $color-queen-blue
+    font-weight: 500
+    width: 85px

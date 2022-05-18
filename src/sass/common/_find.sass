@@ -1,0 +1,48 @@
+.find
+  background: #EEEDF2
+  padding: 90px 0
+  counter-reset: find
+  .title-xl
+    max-width: 760px
+  &-section
+    padding: 80px 0
+    border-bottom: 1px dashed #9B9B9B
+    &:first-of-type
+      padding-top: 40px
+    &:last-child
+      border-bottom: 0
+      padding-bottom: 0
+  &-top
+    @include flexbox
+    align-items: center
+    margin-bottom: 30px
+    &::before
+      counter-increment: find
+      content: counter(find)
+      width: 50px
+      display: block
+      font-size: 64px
+      font-weight: 700
+      color: #CCCCCC
+    .btn
+      margin-left: auto
+  &-trainer
+    margin: -20px
+    padding: 20px
+  &-tags
+    @include flexbox
+    align-items: flex-start
+    margin-top: -10px
+    margin-right: -10px
+    margin-bottom: 40px
+    li
+      margin-right: 10px
+      margin-top: 10px
+      padding: 5px 15px
+      background: #ccc
+      color: #fff
+      border-radius: 30px
+      cursor: pointer
+      transition: .2s
+      &.active
+        background: $color-purple

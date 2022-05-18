@@ -48,3 +48,53 @@ if ($('.promo-slider').length) {
     },
   });
 }
+
+const createSwiper = (el, props) => {
+  if ($(el).length) {
+    const slider = new Swiper(el, {
+      observer: true,
+      observeParents: true,
+      simulateTouch: false,
+      navigation: {
+        nextEl: '.control-next',
+        prevEl: '.control-prev',
+      },
+      pagination: {
+        el: '.control-count',
+        type: 'fraction',
+      },
+      ...props,
+    });
+  }
+};
+
+createSwiper('.find-event', {
+  slidesPerGroup: 4,
+  slidesPerView: 4,
+  spaceBetween: 20,
+});
+
+createSwiper('.find-trainer', {
+  slidesPerGroup: 2,
+  slidesPerView: 2,
+  grid: {
+    rows: 2,
+    fill: 'row',
+  },
+  spaceBetween: 20,
+});
+
+createSwiper('.find-dir', {
+  slidesPerGroup: 4,
+  slidesPerView: 4,
+  grid: {
+    rows: 2,
+    fill: 'row',
+  },
+  spaceBetween: 20,
+});
+
+$('.find-tags li').click(function () {
+  $('.find-tags li').removeClass('active');
+  $(this).addClass('active');
+});

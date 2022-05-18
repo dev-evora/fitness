@@ -1,0 +1,13 @@
+.rating
+  @include flexbox
+  align-items: center
+  .none
+    filter: grayscale(100)
+    opacity: 0.5
+  &::before
+    content: ''
+    width: 19px
+    height: 18px
+    margin-right: 5px
+    display: block
+    background: url(../img/svg/rating.svg) no-repeat
