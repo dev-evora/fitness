@@ -14,17 +14,6 @@
     color: #fff
     &__black
       color: $color-black
-    &::before
-      counter-increment: who
-      content: counter(who)
-      position: absolute
-      z-index: 1
-      bottom: -22px
-      left: 55px
-      font-size: 96px
-      font-weight: 700
-      color: #fff
-      transition: .2s
     img
       position: absolute
       top: 0
@@ -69,3 +58,16 @@
   .btn-wrap
     justify-content: center
     margin-top: 60px
+
+  &-count .who-item
+    &::before
+      counter-increment: who
+      content: counter(who)
+      position: absolute
+      z-index: 1
+      bottom: -22px
+      left: 55px
+      font-size: 96px
+      font-weight: 700
+      color: #fff
+      transition: .2s
