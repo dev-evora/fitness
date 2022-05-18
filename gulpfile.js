@@ -39,6 +39,7 @@ const libs = () => {
     'src/js/vendor/jquery.fancybox.min.js',
     'src/js/vendor/swiper-bundle.min.js',
     'src/js/vendor/jquery.inputmask.min.js',
+    'src/js/vendor/jquery.overlayScrollbars.min.js',
   ])
     .pipe(ngModuleSort())
     .pipe(concat('libs.min.js'))
