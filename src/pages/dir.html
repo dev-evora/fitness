@@ -1,0 +1,35 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Направления' %}
+{% set home = false %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-xl">Направления</h2>
+  </div>
+</section>
+
+<section class="dir">
+  <div class="container">
+    <div class="grid">
+      {% include 'common/dir-item.html' %}
+      {% include 'common/dir-item.html' %}
+      {% include 'common/dir-item.html' %}
+      {% include 'common/dir-item.html' %}
+      {% include 'common/dir-item.html' %}
+      {% include 'common/dir-item.html' %}
+      {% include 'common/dir-item.html' %}
+      {% include 'common/dir-item.html' %}
+      {% include 'common/dir-item.html' %}
+    </div>
+  </div>
+</section>
+
+{% include 'common/get.html' %}
+
+{% endblock %}

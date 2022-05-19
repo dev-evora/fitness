@@ -1,0 +1,17 @@
+.head
+  @include flexbox
+  align-items: flex-start
+  margin-bottom: 40px
+  &-breadcrumbs
+    margin-bottom: 25px
+    font-size: 12px
+    display: block
+    width: 100%
+    li
+      display: inline
+      color: #9B9B9B
+      &::after
+        content: ">"
+        padding-left: 4px
+      &:last-child::after
+        display: none
