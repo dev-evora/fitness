@@ -1,4 +1,6 @@
+/* eslint-disable operator-linebreak */
 /* eslint-disable no-inner-declarations */
+
 // const viewportFix = (width) => {
 //   const meta = $('meta[name="viewport"]');
 //   meta.attr('content', 'user-scalable=no, width=' + (screen.width <= width ? width : 'device-width'));
@@ -31,24 +33,6 @@ const maskPhone = () => {
 
 maskPhone();
 
-if ($('.promo-slider').length) {
-  const slider = new Swiper('.promo-slider', {
-    observer: true,
-    observeParents: true,
-    watchSlidesProgress: true,
-    allowTouchMove: false,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.promo-pagination',
-      type: 'bullets',
-      clickable: true,
-    },
-  });
-}
-
 const createSwiper = (el, props) => {
   if ($(el).length) {
     const slider = new Swiper(el, {
@@ -67,6 +51,69 @@ const createSwiper = (el, props) => {
     });
   }
 };
+
+$('.find-tags li').click(function () {
+  $('.find-tags li').removeClass('active');
+  $(this).addClass('active');
+});
+
+/*
+ * Выпадающий список с чекбоксами
+ */
+
+$('.lead-select__open').click(function () {
+  const thisDropdown = $(this).next();
+
+  $('.lead-select__dropdown').slideUp(200);
+
+  if (thisDropdown.is(':hidden')) thisDropdown.slideDown(200);
+});
+
+$('.lead-select__check span').click(function () {
+  const checkbox = $(this).closest('.lead-select__dropdown');
+
+  checkbox.find('input:checkbox:checked').length ===
+  checkbox.find('input:checkbox').length
+    ? checkbox.find('input:checkbox').prop('checked', false)
+    : checkbox.find('input:checkbox').prop('checked', true);
+});
+
+$('.lead-select').each(function (i, item) {
+  $('.lead-select__dropdown .btn', item).click(function () {
+    const checked = [];
+
+    $(this).closest('.lead-select__dropdown').slideUp(200);
+
+    $('.checkbox input:checked', item).each(function () {
+      checked.push($(this).next().text());
+    });
+
+    $('.lead-select__input', item).val(checked.join(', '));
+  });
+  $('.lead-select__content', item).overlayScrollbars({});
+});
+
+/*
+ * Слайдеры
+ */
+
+if ($('.promo-slider').length) {
+  const slider = new Swiper('.promo-slider', {
+    observer: true,
+    observeParents: true,
+    watchSlidesProgress: true,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.promo-pagination',
+      type: 'bullets',
+      clickable: true,
+    },
+  });
+}
 
 createSwiper('.find-event', {
   slidesPerGroup: 4,
@@ -102,9 +149,4 @@ createSwiper('.popular-slider', {
     fill: 'row',
   },
   spaceBetween: 20,
-});
-
-$('.find-tags li').click(function () {
-  $('.find-tags li').removeClass('active');
-  $(this).addClass('active');
 });
