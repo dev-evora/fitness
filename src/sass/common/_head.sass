@@ -1,7 +1,8 @@
 .head
-  @include flexbox
-  align-items: flex-start
   margin-bottom: 40px
+  .container
+    @include flexbox
+    align-items: flex-start
   &-breadcrumbs
     margin-bottom: 25px
     font-size: 12px
@@ -15,3 +16,5 @@
         padding-left: 4px
       &:last-child::after
         display: none
+  .btn
+    margin-left: auto

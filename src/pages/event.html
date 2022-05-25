@@ -1,0 +1,188 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Раздел/подраздел' %}
+{% set home = false %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-xl">Оздоровительные</h2>
+    <a href="#" class="btn btn-tg"><img src="img/svg/tg.svg" alt="">Задать вопрос в чате</a>
+    <ul class="tab-list">
+      <li class="active" data-tab="main">Общее</li>
+      <li data-tab="desc">Подробное описание</li>
+    </ul>
+    <div class="tab-content active" data-tab="main">main</div>
+    <div class="tab-content" data-tab="desc">desc</div>
+    <ul class="event-list">
+      <div class="event-list__more"><p>Еще разделы</p></div>
+      <li><a href="#">Все<small>860</small></a></li>
+      <li><a href="#">Фэйс-фитнес<small>860</small></a></li>
+      <li><a href="#">ОФП<small>860</small></a></li>
+      <li><a href="#">Аэробика<small>860</small></a></li>
+      <li><a href="#">ЛФК<small>860</small></a></li>
+      <li><a href="#">Фэйс-фитнес<small>860</small></a></li>
+      <li><a href="#">ОФП<small>860</small></a></li>
+      <li><a href="#">Аэробика<small>860</small></a></li>
+      <li><a href="#">ЛФК<small>860</small></a></li>
+      <li><a href="#">Фэйс-фитнес<small>860</small></a></li>
+      <li><a href="#">ОФП<small>860</small></a></li>
+      <li><a href="#">Аэробика<small>860</small></a></li>
+      <li><a href="#">ЛФК<small>860</small></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="event">
+  <div class="container">
+    <div class="event-row">
+      <div class="event-head">
+        <div class="event-sidebar">
+          Найдено результатов: 32
+          <div class="btn-wrap"><div class="event-head__clear">Очистить фильтр</div></div>
+        </div>
+        <div class="event-main">
+          <select class="event-head__select">
+            <option>Не сортировать ↓</option>
+            <option>По цене: сначала минимальная цена</option>
+            <option>По цене: сначала максимальная цена</option>
+            <option>По дате: сначала ближайшие</option>
+            <option>По рейтингу: сначала с высоким рейтингом</option>
+            <option>По рейтингу: сначала с низким рейтингом</option>
+          </select>
+        </div>
+      </div>
+      <div class="event-sidebar">
+        <div class="event-filter">
+          <div class="event-filter__title">Тип тренировки</div>
+          <div class="event-filter__content">
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>Индивидуальное занятие</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>Групповое</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>Онлайн</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>Офлайн</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>Для детей</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>Для взрослых</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>Для взрослых детьми</p>
+            </label>
+          </div>
+        </div>
+        <div class="event-filter">
+          <div class="event-filter__title">Длительность</div>
+          <div class="event-filter__content">
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>30 мин</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>60 мин</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>90 мин</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>120 мин</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>160 мин</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>230 мин</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>240 мин</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>250 мин</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>и т.д.</p>
+            </label>
+          </div>
+        </div>
+        <div class="event-filter">
+          <div class="event-filter__title">Цена</div>
+          <input type="text" class="event-filter__price" data-type="double" data-min="0" data-max="20000" data-step="100" />
+          <div class="event-filter__subtitle">от <span id="price-min"></span> р до <span id="price-max"></span> р</div>
+        </div>
+        <div class="event-filter">
+          <div class="event-filter__title">Дата начала</div>
+        </div>
+        <div class="event-filter">
+          <div class="event-filter__title">Рейтинг тренировки</div>
+          <input type="text" class="event-filter__rating" data-type="double" data-min="0" data-max="10" data-step="1" />
+          <div class="event-filter__subtitle">от <span id="rating-min"></span> до <span id="rating-max"></span></div>
+        </div>
+        <div class="event-filter">
+          <div class="event-filter__title">Ваш уровень</div>
+          <div class="event-filter__content">
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>Начинающий</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>Средний уровень</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>Продвинутый уровень</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>Профессионал</p>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="event-main">
+        <div class="grid">
+          {% include 'common/event-item.html' %}
+          {% include 'common/event-item.html' %}
+          {% include 'common/event-item.html' %}
+          {% include 'common/event-item.html' %}
+          {% include 'common/event-item.html' %}
+          {% include 'common/event-item.html' %}
+          {% include 'common/event-item.html' %}
+          {% include 'common/event-item.html' %}
+          {% include 'common/event-item.html' %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include 'common/get.html' %}
+
+{% endblock %}

@@ -57,6 +57,50 @@ $('.find-tags li').click(function () {
   $(this).addClass('active');
 });
 
+$('.event-filter').each(function (i, item) {
+  $('.event-filter__content', item).overlayScrollbars({});
+});
+
+/*
+ * Бегунки в фильтре
+ */
+
+const triplets = (str) => {
+  return str.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
+};
+
+$('.js-range-slider').ionRangeSlider();
+
+$('.event-filter__price').ionRangeSlider({
+  onStart: updatePrice,
+  onChange: updatePrice,
+  onFinish: updatePrice,
+  hide_from_to: true,
+});
+
+function updatePrice(data) {
+  const from = data.from;
+  const to = data.to;
+
+  $('#price-min').text(triplets(from));
+  $('#price-max').text(triplets(to));
+}
+
+$('.event-filter__rating').ionRangeSlider({
+  onStart: updateRating,
+  onChange: updateRating,
+  onFinish: updateRating,
+  hide_from_to: true,
+});
+
+function updateRating(data) {
+  const from = data.from;
+  const to = data.to;
+
+  $('#rating-min').text(from);
+  $('#rating-max').text(to);
+}
+
 /*
  * Выпадающий список с чекбоксами
  */
@@ -150,3 +194,43 @@ createSwiper('.popular-slider', {
   },
   spaceBetween: 20,
 });
+
+/*
+ * Показать все разделы
+ */
+
+const eventList = () => {
+  const eventListMain = $('.event-list');
+  const eventListItem = $('.event-list li');
+  const eventListMore = $('.event-list__more');
+
+  if (eventListMain.height() - 20 > eventListItem.height()) {
+    eventListMain.addClass('overflow');
+    eventListMore.show();
+  }
+
+  eventListMore.click(function () {
+    $(this).hide();
+    eventListMain.removeClass('overflow');
+  });
+};
+
+eventList();
+
+/*
+ * Табы
+ */
+
+const tabs = () => {
+  $('.tab-list li').click(function () {
+    const tabID = $(this).attr('data-tab');
+
+    $('.tab-list li').removeClass('active');
+    $(this).addClass('active');
+
+    $('.tab-content').removeClass('active');
+    $('.tab-content[data-tab=' + tabID + ']').addClass('active');
+  });
+};
+
+tabs();
