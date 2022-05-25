@@ -171,6 +171,17 @@
         border: 1px solid $color-black
         border-radius: 4px
         position: relative
+        transition: .2s
+        &:hover
+          color: $color-purple
+          border-color: $color-purple
+          small
+            color: $color-purple
+      &.active a
+        color: $color-purple
+        border-color: $color-purple
+        small
+          color: $color-purple
       small
         position: absolute
         bottom: -7px
@@ -179,6 +190,7 @@
         color: #9b9b9b
         padding: 0 8px
         background: #fff
+        transition: .2s
     &__more
       min-width: 100px
       height: 48px

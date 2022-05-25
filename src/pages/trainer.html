@@ -1,0 +1,67 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Все тренеры' %}
+{% set home = false %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-xl">Все тренеры</h2>
+    <a href="#" class="btn btn-tg"><img src="img/svg/tg.svg" alt="">Задать вопрос в чате</a>
+    <h3 class="title-lg">Выберите направление и нужный раздел тренировки:</h3>
+    <ul class="dir-list">
+      <li class="active"><a href="#"><img src="img/find-dir.jpg" alt=""><p>Фитнес</p></a></li>
+      <li><a href="#"><img src="img/find-dir.jpg" alt=""><p>Фитнес</p></a></li>
+      <li><a href="#"><img src="img/find-dir.jpg" alt=""><p>Оздоровительные</p></a></li>
+      <li><a href="#"><img src="img/find-dir.jpg" alt=""><p>Фитнес</p></a></li>
+      <li><a href="#"><img src="img/find-dir.jpg" alt=""><p>Оздоровительные</p></a></li>
+      <li><a href="#"><img src="img/find-dir.jpg" alt=""><p>Фитнес</p></a></li>
+      <li><a href="#"><img src="img/find-dir.jpg" alt=""><p>Оздоровительные</p></a></li>
+      <li><a href="#"><img src="img/find-dir.jpg" alt=""><p>Фитнес</p></a></li>
+      <li><a href="#"><img src="img/find-dir.jpg" alt=""><p>Оздоровительные</p></a></li>
+      <li><a href="#"><img src="img/find-dir.jpg" alt=""><p>Фитнес</p></a></li>
+      <li><a href="#"><img src="img/find-dir.jpg" alt=""><p>Оздоровительные</p></a></li>
+    </ul>
+    <ul class="event-list">
+      <div class="event-list__more"><p>Еще разделы</p></div>
+      <li class="active"><a href="#">Все<small>860</small></a></li>
+      <li><a href="#">Фэйс-фитнес<small>860</small></a></li>
+      <li><a href="#">ОФП<small>860</small></a></li>
+      <li><a href="#">Аэробика<small>860</small></a></li>
+      <li><a href="#">ЛФК<small>860</small></a></li>
+      <li><a href="#">Фэйс-фитнес<small>860</small></a></li>
+      <li><a href="#">ОФП<small>860</small></a></li>
+      <li><a href="#">Аэробика<small>860</small></a></li>
+      <li><a href="#">ЛФК<small>860</small></a></li>
+      <li><a href="#">Фэйс-фитнес<small>860</small></a></li>
+      <li><a href="#">ОФП<small>860</small></a></li>
+      <li><a href="#">Аэробика<small>860</small></a></li>
+      <li><a href="#">ЛФК<small>860</small></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="trainer">
+  <div class="container">
+    <div class="grid">
+      {% include 'common/trainer-item.html' %}
+      {% include 'common/trainer-item.html' %}
+      {% include 'common/trainer-item.html' %}
+      {% include 'common/trainer-item.html' %}
+      {% include 'common/trainer-item.html' %}
+      {% include 'common/trainer-item.html' %}
+      {% include 'common/trainer-item.html' %}
+      {% include 'common/trainer-item.html' %}
+      {% include 'common/trainer-item.html' %}
+    </div>
+    <div class="load-btn"><span>Показать еще</span></div>
+  </div>
+</section>
+
+{% include 'common/get.html' %}
+
+{% endblock %}
