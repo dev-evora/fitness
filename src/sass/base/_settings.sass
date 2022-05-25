@@ -108,3 +108,24 @@ body
 .title-lg
   font-size: 20px
   font-weight: 500
+
+.load-btn
+  @include flexbox
+  align-items: center
+  justify-content: center
+  color: $color-queen-blue
+  font-weight: 500
+  text-decoration: underline
+  margin-top: 50px
+  span
+    @include flexbox
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    &::before
+      content: ''
+      display: block
+      width: 24px
+      height: 24px
+      margin-right: 5px
+      background: url(../img/svg/load-btn.svg) no-repeat center
