@@ -1,0 +1,42 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Результаты поиска' %}
+{% set home = false %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-xl">Результаты поиска: “ф”</h2>
+    <ul class="event-list">
+      <div class="event-list__more"><p>Еще разделы</p></div>
+      <li class="active"><a href="#">Все<small>860</small></a></li>
+      <li><a href="#">Фэйс-фитнес<small>860</small></a></li>
+      <li><a href="#">ОФП<small>860</small></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="search">
+  <div class="container">
+    <div class="grid">
+      {% include 'common/event-item.html' %}
+      {% include 'common/event-item.html' %}
+      {% include 'common/event-item.html' %}
+      {% include 'common/event-item.html' %}
+      {% include 'common/event-item.html' %}
+      {% include 'common/event-item.html' %}
+      {% include 'common/event-item.html' %}
+      {% include 'common/event-item.html' %}
+      {% include 'common/event-item.html' %}
+    </div>
+    <div class="load-btn"><span>Показать еще</span></div>
+  </div>
+</section>
+
+{% include 'common/get.html' %}
+
+{% endblock %}
