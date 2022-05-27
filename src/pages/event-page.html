@@ -1,0 +1,183 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Страница тренировки' %}
+{% set home = false %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-xl">Йога для начинающих. Мягкая растяжка спины и плеч</h2>
+    <a href="#" class="btn btn-tg"><img src="img/svg/tg.svg" alt="">Задать вопрос в чате</a>
+    <div class="head-top">
+      {# если рейтинг 0, добавить класс none, получится class="rating none" #}
+      <div class="rating">9/10</div>
+      <div class="head-top__item">Йога Мудра</div>
+      <div class="head-top__item">ID 1024</div>
+    </div>
+    <div class="event-row">
+      <div class="event-head__main">
+        <ul class="tab-list">
+          <li class="active" data-tab="main">Общее</li>
+          <li data-tab="video">Видео тренера</li>
+          <li data-tab="req">Ограничения и требования</li>
+          <li data-tab="how">Как это работает</li>
+          <li data-tab="reviews">Отзывы</li>
+        </ul>
+        <div class="tab-content active" data-tab="main">
+          <div class="trainer-row">
+            <div class="trainer-photo">
+              <div class="trainer-photo__main">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+                </div>
+              </div>
+              <div class="trainer-photo__thumbs swiper-wrapper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+                </div>
+              </div>
+            </div>
+            <div class="trainer-about">
+              <div class="event-table">
+                <div class="event-table__item">
+                  <img src="img/svg/event-table-1.svg" alt="">
+                  <p>Когда<b>24 февраля - 5 мая</b></p>
+                </div>
+                <div class="event-table__item">
+                  <img src="img/svg/event-table-2.svg" alt="">
+                  <p>Уровень<b>Начинающий</b></p>
+                </div>
+                <div class="event-table__item">
+                  <img src="img/svg/event-table-3.svg" alt="">
+                  <p>Длительность<b>30 мин</b></p>
+                </div>
+                <div class="event-table__item">
+                  <img src="img/svg/event-table-4.svg" alt="">
+                  <p>Тип <b>Группа до 6 человек</b></p>
+                </div>
+                <div class="event-table__item">
+                  <img src="img/svg/event-table-5.svg" alt="">
+                  <p>Формат<b>Онлайн</b></p>
+                </div>
+                <div class="event-table__item">
+                  <img src="img/svg/event-table-6.svg" alt="">
+                  <p>Для кого<b>Взрослые с детьми</b></p>
+                </div>
+              </div>
+              <h3 class="title-md">Общее описание</h3>
+              <ul class="trainer-info">
+                <li class="trainer-address">
+                  <img src="img/svg/trainer-info-4.svg" alt="">
+                  <p>Санкт-Петербург. Район: Калининский, Петроградский, какой-то еще</p>
+                </li>
+              </ul>
+              <p>Вы уже много слышали о йоге, но не знаете с чего начать? Самое сложное в йоге – развернуть коврик. Но сделать это все-таки стоит! Настал подходящий момент, чтобы начать заниматься. Первые шаги в йоге – самые важные. Поэтому мы разработали для вас эту программу – она идеально подходит для новичков. Вы окунетесь в практику йоги, узнаете ее основные принципы и почувствуете мгновенный эффект. Yoga Start с Татьяной Денисовой – это удобный видеокурс, с помощью которого вы легко, весело и c пользой для здоровья сможете начать заниматься йогой!</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" data-tab="video">
+          <div class="trainer-video">
+            <a href="https://www.youtube.com/watch?v=BypWAdlJkTg" data-fancybox class="trainer-video__item video"><img alt=""></a>
+            <a href="https://www.youtube.com/watch?v=bnzHECC0Z8A" data-fancybox class="trainer-video__item video"><img alt=""></a>
+          </div>
+        </div>
+        <div class="tab-content" data-tab="req">
+          <h3 class="title-md">Ограничения по тренировке</h3>
+          <p>Не подходит для людей с медицинскими противопоказаниями</p>
+          <h3 class="title-md">Что потребуется для тренировок</h3>
+          <ul>
+            <li>Гимнастический коврик</li>
+            <li>2 гантели</li>
+          </ul>
+        </div>
+        <div class="tab-content" data-tab="how">
+          <h3 class="title-md">Как это работает</h3>
+          <ol>
+            <li>Какой-то шаг</li>
+            <li>Какой-то шаг</li>
+            <li>Какой-то шаг</li>
+            <li>Какой-то шаг</li>
+          </ol>
+          <h3 class="title-md">Как это работает</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur maxime optio magni vero minima in animi aliquam dolor omnis, labore laudantium, quam repellat quidem nihil numquam perferendis quis minus dolores.</p>
+        </div>
+        <div class="tab-content" data-tab="reviews">
+          <div class="event-reviews swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">{% include 'common/trainer-reviews__item.html' %}</div>
+              <div class="swiper-slide">{% include 'common/trainer-reviews__item.html' %}</div>
+              <div class="swiper-slide">{% include 'common/trainer-reviews__item.html' %}</div>
+              <div class="swiper-slide">{% include 'common/trainer-reviews__item.html' %}</div>
+              <div class="swiper-slide">{% include 'common/trainer-reviews__item.html' %}</div>
+              <div class="swiper-slide">{% include 'common/trainer-reviews__item.html' %}</div>
+            </div>
+            <div class="control">
+              <div class="control-prev"></div>
+              <div class="control-count"></div>
+              <div class="control-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="event-head__sidebar">
+        <div class="event-val">
+          <h4>Стоимость</h4>
+          <h5>20 000 ₽</h5>
+          <h2>1 000 ₽</h2>
+          <p>за одну тренировку</p>
+          <div class="btn-wrap"><a href="#" class="btn btn-purple">Записаться</a></div>
+        </div>
+        <div class="event-free">
+          <p>Получите бесплатную консультацию по выбору тренировки</p>
+          <div class="btn-wrap"><a href="#" class="btn btn-white">Получить консультацию</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="event-section">
+  <div class="container">
+    <h2 class="title-xl">Акции</h2>
+  </div>
+</section>
+
+<section class="event-section">
+  <div class="container">
+    <h2 class="title-xl">Кто проводит</h2>
+    <div class="grid">
+      {% include 'common/trainer-item.html' %}
+    </div>
+  </div>
+</section>
+
+<section class="event-section">
+  <div class="container">
+    <h2 class="title-xl">Другие тренировки этого тренера</h2>
+    <div class="grid">
+      {% include 'common/event-item.html' %}
+      {% include 'common/event-item.html' %}
+      {% include 'common/event-item.html' %}
+      {% include 'common/event-item.html' %}
+      {% include 'common/event-item.html' %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

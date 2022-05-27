@@ -259,3 +259,88 @@
       border-radius: 30px
       margin-top: 20px
       cursor: pointer
+
+  &-head
+    &__main
+      width: calc(100% - 270px - 40px)
+    &__sidebar
+      margin-left: auto
+      width: 270px
+  &-reviews
+    .control
+      justify-content: flex-start
+
+  &-val
+    padding: 20px
+    border-radius: 4px
+    box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.1)
+    position: relative
+    margin-top: 40px
+    .btn
+      margin-left: 0 !important
+      margin-top: 15px
+    h4
+      font-weight: 500
+      color: $color-queen-blue
+    h5
+      font-size: 12px
+      font-weight: 500
+      color: #9b9b9b
+      position: absolute
+      top: 21px
+      right: 20px
+      text-decoration-line: line-through
+    h2
+      font-size: 48px
+      font-weight: 500
+      color: $color-purple
+      margin-top: 10px
+    p
+      font-size: 12px
+
+  &-free
+    padding: 20px
+    border-radius: 4px
+    background: $color-queen-blue
+    color: #fff
+    margin-top: 40px
+    p
+      font-size: 16px
+    .btn-wrap
+      margin-top: 20px
+      margin-left: 0 !important
+    .btn
+      width: 100%
+  &-table
+    @include flexbox
+    align-items: flex-start
+    margin-right: -30px
+    margin-bottom: -30px
+    &__item
+      width: calc(100% / 3 - 30px)
+      margin-bottom: 30px
+      margin-right: 30px
+      @include flexbox
+      align-items: flex-start
+      p
+        margin-top: 0 !important
+        width: calc(100% - 24px - 10px)
+        b
+          display: block
+          font-size: 12px
+          margin-top: 2px
+      img
+        width: 24px
+        margin-right: 10px
+
+  &-section
+    margin-bottom: 90px
+    .grid
+      margin-top: 0
+    .grid
+      .event-item
+        margin: 40px 10px 0
+        width: calc(100% / 4 - 20px)
+      .trainer-item
+        width: calc(100% / 2 - 20px)
+        margin: 20px 10px 0

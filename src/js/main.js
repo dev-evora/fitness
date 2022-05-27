@@ -201,6 +201,12 @@ createSwiper('.trainer-reviews', {
   spaceBetween: 20,
 });
 
+createSwiper('.event-reviews', {
+  slidesPerGroup: 3,
+  slidesPerView: 3,
+  spaceBetween: 20,
+});
+
 /*
  * Показать все разделы
  */

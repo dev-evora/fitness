@@ -21,7 +21,7 @@
         color: $color-queen-blue
         img
           filter: invert(37%) sepia(65%) saturate(387%) hue-rotate(160deg) brightness(94%) contrast(85%)
-  &-photo
+  &-pic
     width: 150px
     height: 200px
     position: relative
@@ -94,6 +94,8 @@
       img
         width: 18px
         margin-right: 10px
+      &:first-child
+        margin-left: 0
   &-exp
     margin-left: 0 !important
     width: 90px
@@ -221,6 +223,8 @@
     margin-top: 10px
     @include flexbox
     align-items: flex-start
+    &:first-child
+      margin-top: -10px
     p
       width: 100%
       font-size: 16px
