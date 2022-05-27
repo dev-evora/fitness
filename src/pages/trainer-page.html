@@ -1,0 +1,168 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Страница тренера' %}
+{% set home = false %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-xl">Татьяна Агарипова</h2>
+    <a href="#" class="btn btn-purple">Записаться к тренеру</a>
+    <div class="head-top">
+      {# если рейтинг 0, добавить класс none, получится class="rating none" #}
+      <div class="rating">9/10</div>
+      <div class="head-top__item">ID 1024</div>
+    </div>
+    <ul class="tab-list">
+      <li class="active" data-tab="main">Общее</li>
+      <li data-tab="sert">Образование и сертификаты</li>
+      <li data-tab="about">О тренере</li>
+      <li data-tab="how">Как это работает</li>
+      <li data-tab="reviews">Отзывы</li>
+    </ul>
+    <div class="tab-content active" data-tab="main">
+      <div class="trainer-row">
+        <div class="trainer-photo">
+          <div class="trainer-photo__main">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+            </div>
+          </div>
+          <div class="trainer-photo__thumbs swiper-wrapper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="img/find-trainer.jpg" alt=""></div>
+            </div>
+          </div>
+        </div>
+        <div class="trainer-about">
+          <ul class="trainer-info">
+            <li class="trainer-format">
+              <img src="img/svg/trainer-info-3.svg" alt="">
+              <p>Онлайн</p>
+            </li>
+            <li class="trainer-address">
+              <img src="img/svg/trainer-info-4.svg" alt="">
+              <p>Санкт-Петербург. Район: Калининский, Петроградский, какой-то еще</p>
+            </li>
+          </ul>
+          <h3 class="title-md">Опыт и достижения</h3>
+          <ul>
+            <li>Опыт тренерской работы – более 5 лет.</li>
+            <li>1 место в чемпионате г. Санкт-Петербурга по борьбе самбо среди ветеранов, возрастная категория «35-44», 2017 г.</li>
+            <li>Победитель международного турнира по дзюдо среди ветеранов, 2017 г.</li>
+          </ul>
+          <div class="trainer-phone">
+            <p>Контакты тренера</p>
+            <a href="tel:+7 (911) 206-90-67">+7 (911) 206-90-67</a>
+          </div>
+          <div class="trainer-video">
+            <p>Видео тренера</p>
+            <a href="https://www.youtube.com/watch?v=BypWAdlJkTg" data-fancybox class="trainer-video__item video"><img alt=""></a>
+            <a href="https://www.youtube.com/watch?v=bnzHECC0Z8A" data-fancybox class="trainer-video__item video"><img alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-content" data-tab="sert">
+      <h3 class="title-md">Образование</h3>
+      <ul>
+        <li>Опыт тренерской работы – более 5 лет.</li>
+        <li>1 место в чемпионате г. Санкт-Петербурга по борьбе самбо среди ветеранов, возрастная категория «35-44», 2017 г.</li>
+        <li>Победитель международного турнира по дзюдо среди ветеранов, 2017 г.</li>
+        <li>3 место в открытом турнире «Транснефть» по хоккею с шайбой, 2019 г.</li>
+        <li>Чемпионат по универсальному бою – 3 степень, 2019 г.</li>
+      </ul>
+      <h3 class="title-md">Сертификаты</h3>
+      <div class="trainer-sert">
+        <a href="img/sert.jpg" data-fancybox="sert"><img src="img/sert.jpg" alt=""></a>
+        <a href="img/sert.jpg" data-fancybox="sert"><img src="img/sert.jpg" alt=""></a>
+        <a href="img/sert.jpg" data-fancybox="sert"><img src="img/sert.jpg" alt=""></a>
+      </div>
+    </div>
+    <div class="tab-content" data-tab="about">
+      <h3 class="title-md">О тренере</h3>
+      <ul>
+        <li>Опыт тренерской работы – более 5 лет.</li>
+        <li>1 место в чемпионате г. Санкт-Петербурга по борьбе самбо среди ветеранов, возрастная категория «35-44», 2017 г.</li>
+        <li>Победитель международного турнира по дзюдо среди ветеранов, 2017 г.</li>
+        <li>3 место в открытом турнире «Транснефть» по хоккею с шайбой, 2019 г.</li>
+        <li>Чемпионат по универсальному бою – 3 степень, 2019 г.</li>
+      </ul>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse temporibus assumenda asperiores ullam debitis optio delectus velit mollitia nulla dolorum quos quisquam ipsam illum autem dolor, adipisci doloribus ipsa excepturi.</p>
+      <p>Unde explicabo mollitia commodi neque quam delectus maiores quae maxime dicta eius ducimus cupiditate sapiente nostrum totam, minima nemo ratione? Laborum nihil in dolorum harum, voluptates excepturi reprehenderit aliquid! Ullam.</p>
+    </div>
+    <div class="tab-content" data-tab="how">
+      <h3 class="title-md">Как это работает</h3>
+      <ol>
+        <li>Какой-то шаг</li>
+        <li>Какой-то шаг</li>
+        <li>Какой-то шаг</li>
+        <li>Какой-то шаг</li>
+      </ol>
+    </div>
+    <div class="tab-content" data-tab="reviews">
+      <div class="trainer-reviews swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">{% include 'common/trainer-reviews__item.html' %}</div>
+          <div class="swiper-slide">{% include 'common/trainer-reviews__item.html' %}</div>
+          <div class="swiper-slide">{% include 'common/trainer-reviews__item.html' %}</div>
+          <div class="swiper-slide">{% include 'common/trainer-reviews__item.html' %}</div>
+          <div class="swiper-slide">{% include 'common/trainer-reviews__item.html' %}</div>
+          <div class="swiper-slide">{% include 'common/trainer-reviews__item.html' %}</div>
+        </div>
+        <div class="control">
+          <div class="control-prev"></div>
+          <div class="control-count"></div>
+          <div class="control-next"></div>
+        </div>
+      </div>
+    </div>
+    <ul class="event-list">
+      <div class="event-list__more"><p>Еще разделы</p></div>
+      <li class="active"><a href="#">Все<small>860</small></a></li>
+      <li><a href="#">Фэйс-фитнес<small>860</small></a></li>
+      <li><a href="#">ОФП<small>860</small></a></li>
+      <li><a href="#">Аэробика<small>860</small></a></li>
+      <li><a href="#">ЛФК<small>860</small></a></li>
+      <li><a href="#">Фэйс-фитнес<small>860</small></a></li>
+      <li><a href="#">ОФП<small>860</small></a></li>
+      <li><a href="#">Аэробика<small>860</small></a></li>
+      <li><a href="#">ЛФК<small>860</small></a></li>
+      <li><a href="#">Фэйс-фитнес<small>860</small></a></li>
+      <li><a href="#">ОФП<small>860</small></a></li>
+      <li><a href="#">Аэробика<small>860</small></a></li>
+      <li><a href="#">ЛФК<small>860</small></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="trainer-event">
+  <div class="container">
+    <div class="grid">
+      {% include 'common/event-item.html' %}
+      {% include 'common/event-item.html' %}
+      {% include 'common/event-item.html' %}
+    </div>
+    <div class="btn-wrap"><a href="#" class="btn btn-outline">Перейти ко всем тренировкам</a></div>
+  </div>
+</section>
+
+{% include 'common/get.html' %}
+
+{% endblock %}

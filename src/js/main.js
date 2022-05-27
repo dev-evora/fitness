@@ -195,6 +195,12 @@ createSwiper('.popular-slider', {
   spaceBetween: 20,
 });
 
+createSwiper('.trainer-reviews', {
+  slidesPerGroup: 4,
+  slidesPerView: 4,
+  spaceBetween: 20,
+});
+
 /*
  * Показать все разделы
  */
@@ -234,3 +240,32 @@ const tabs = () => {
 };
 
 tabs();
+
+if ($('.trainer-photo').length) {
+  const thumbs = new Swiper('.trainer-photo__thumbs', {
+    observer: true,
+    observeParents: true,
+    watchSlidesProgress: true,
+    spaceBetween: 10,
+    slidesPerView: 5,
+  });
+
+  const main = new Swiper('.trainer-photo__main', {
+    watchSlidesProgress: true,
+    thumbs: {
+      swiper: thumbs,
+    },
+  });
+}
+
+$('.video').each(function (i, item) {
+  const video = $(item).attr('href');
+  const videoID = video.match(
+    /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/
+  );
+
+  $('> img', item).attr(
+    'src',
+    'https://i.ytimg.com/vi/' + videoID[2] + '/sd1.jpg'
+  );
+});

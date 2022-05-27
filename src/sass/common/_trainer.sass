@@ -153,3 +153,117 @@
           border-bottom: 1px solid #fff
       .btn-wrap
         margin-top: 60px
+
+  &-event
+    padding-bottom: 90px
+    .btn-wrap
+      justify-content: center
+      margin-top: 50px
+    .grid
+      .event-item
+        margin: 40px 10px 0
+        width: calc(100% / 4 - 20px)
+
+  &-row
+    @include flexbox
+    align-items: flex-start
+  &-photo
+    width: 290px
+    height: 360px
+    position: relative
+    border-radius: 4px
+    overflow: hidden
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+    &__main
+      width: 100%
+      height: 100%
+      overflow: hidden
+    &__thumbs
+      position: absolute
+      bottom: 10px
+      left: 10px
+      right: 10px
+      width: auto
+      overflow: hidden
+      z-index: 10
+      height: 35px
+      .swiper-slide
+        border-radius: 4px
+        overflow: hidden
+        border: 1px solid #fff
+        box-sizing: border-box
+  &-about
+    width: calc(100% - 290px - 40px)
+    margin-left: auto
+    .trainer-info
+      margin-top: -15px
+      border: 0
+      margin-bottom: 30px
+    .trainer-format
+      margin-left: 0
+    .trainer-address p
+      display: block
+      height: auto
+      overflow: visible
+  &-phone
+    margin-top: 30px
+    p
+      font-size: 16px
+      margin-bottom: 5px
+    a
+      font-weight: 700
+      font-size: 18px
+  &-video
+    margin-top: 10px
+    @include flexbox
+    align-items: flex-start
+    p
+      width: 100%
+      font-size: 16px
+    &__item
+      display: block
+      width: 130px
+      height: 80px
+      border-radius: 4px
+      overflow: hidden
+      margin-top: 10px
+      margin-right: 10px
+      position: relative
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: rgba(0,0,0,.2) url(../img/svg/play.svg) no-repeat center
+  &-sert
+    @include flexbox
+    align-items: flex-start
+    margin-top: -15px
+    a
+      display: block
+      margin-right: 15px
+      margin-top: 15px
+      img
+        width: 130px
+  &-reviews
+    &__item
+      .title-md
+        margin-bottom: 7px !important
+      small
+        font-size: 12px
+        color: $color-queen-blue
+      p
+        margin-top: 10px !important
+    .control
+      justify-content: flex-start
