@@ -1,0 +1,38 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Сотрудничество' %}
+{% set home = false %}
+
+{% block content %}
+
+<section class="head coop-head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-xl">Сотрудничество</h2>
+    <h3 class="title-lg">Отправьте заявку и мы разместим информацию о ваших тренировках на сервисе. Так вы сможете рассказать о себе и своей деятельности. А мы найдем вам клиентов.</h3>
+    <div class="btn-wrap"><a href="#" class="btn btn-purple">Начать прямо сейчас</a></div>
+  </div>
+</section>
+
+<section class="coop">
+  <div class="container">
+    <h2 class="title-xl">Как мы сотрудничаем с тренерами</h2>
+    <p>Описание условий сотрудничества</p>
+    <p>Описание условий сотрудничества</p>
+    <h3 class="title-md">Пункт 1</h3>
+    <p>Описание условий сотрудничества</p>
+    <p>Описание условий сотрудничества</p>
+    <h3 class="title-md">Пункт 1</h3>
+    <p>Описание условий сотрудничества</p>
+    <p>Описание условий сотрудничества</p>
+    <h3 class="title-md">Пункт 1</h3>
+    <p>Описание условий сотрудничества</p>
+    <p>Описание условий сотрудничества</p>
+  </div>
+</section>
+
+{% include 'common/trainer-you.html' %}
+
+{% endblock %}
