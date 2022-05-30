@@ -1,0 +1,74 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'Контакты' %}
+{% set home = false %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <div class="contact-row">
+      <div class="contact-main">
+        <h2 class="title-xl">Контакты</h2>
+        <h3 class="title-md">Мы работаем и отвечаем на звонки каждый день с 9:00 до 20:00.</h3>
+        <ul class="contact-list">
+          <li>
+            <span>Телефон</span>
+            <p><a href="tel:+7 (911) 206-90-67">+7 (911) 206-90-67</a></p>
+          </li>
+          <li>
+            <span>E-mail</span>
+            <p><a href="mailto:mail@mail.ru">mail@mail.ru</a></p>
+          </li>
+          <li>
+            <span>Соц.сети</span>
+            <ul class="header-social">
+              <li><a href="#"><img src="img/svg/vk.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/svg/tg.svg" alt=""></a></li>
+              <li><a href="#"><img src="img/svg/wa.svg" alt=""></a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="btn-wrap"><a href="#" class="btn btn-tg"><img src="img/svg/tg.svg" alt="">Чат поддержки для тренеров</a></div>
+      </div>
+      <div class="contact-form">
+        <h2 class="title-xl">Обратная связь</h2>
+        <form action="#" method="post">
+          <label class="label">
+            <p class="label-title">Номер телефона</p>
+            <input type="tel" class="input masked" placeholder="+7 (___) ___-__-__" required />
+          </label>
+          <label class="label">
+            <p class="label-title">E-mail</p>
+            <input type="email" class="input" placeholder="example@mail.ru" required />
+          </label>
+          <label class="label">
+            <p class="label-title">Как к вам обращаться?</p>
+            <input type="text" class="input" placeholder="Введите имя" required />
+          </label>
+          <label class="label">
+            <p class="label-title">Сообщение</p>
+            <textarea type="text" class="textarea" placeholder="Если есть ограничения, укажите их. Например, противопоказания или инвадидность"></textarea>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" checked />
+            <p>Согласие на обработку персональных данных</p>
+          </label>
+          <button class="btn btn-purple">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include 'common/trainer-you.html' %}
+
+{% endblock %}
