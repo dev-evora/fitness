@@ -41,6 +41,7 @@ const libs = () => {
     'src/js/vendor/jquery.inputmask.min.js',
     'src/js/vendor/jquery.overlayScrollbars.min.js',
     'src/js/vendor/ion.rangeSlider.min.js',
+    'src/js/vendor/index.umd.min.js',
   ])
     .pipe(ngModuleSort())
     .pipe(concat('libs.min.js'))

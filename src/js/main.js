@@ -275,3 +275,15 @@ $('.video').each(function (i, item) {
     'https://i.ytimg.com/vi/' + videoID[2] + '/sd1.jpg'
   );
 });
+
+const picker = new easepick.create({
+  element: '.event-filter__datepicker',
+  css: ['https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.css'],
+  zIndex: 10,
+  lang: 'ru-RU',
+  format: 'DD.MM.YYYY',
+  RangePlugin: {
+    tooltip: false,
+  },
+  plugins: ['RangePlugin'],
+});
