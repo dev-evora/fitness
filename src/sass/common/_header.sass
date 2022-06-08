@@ -41,7 +41,7 @@
   &-city
     @include flexbox
     align-items: center
-    cursor: pointer
+    position: relative
     &::after
       content: ''
       display: block
@@ -49,6 +49,8 @@
       height: 8px
       margin-left: 10px
       background: url(../img/svg/city-arrow.svg) no-repeat
+    p
+      cursor: pointer
   &-login
     border: 1px solid $color-queen-blue
     color: $color-queen-blue

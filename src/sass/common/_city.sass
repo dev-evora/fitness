@@ -1,0 +1,91 @@
+.city
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 1000
+  display: none
+  &-wrapper
+    width: 100%
+    height: 100%
+    @include flexbox
+    align-items: center
+    justify-content: center
+  &-overlay
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(0,0,0,.3)
+    z-index: -1
+  &-popup
+    max-width: 400px
+    width: 100%
+    background: #fff
+    border-radius: 5px
+    padding: 40px 0 30px
+    position: relative
+    .title-md
+      margin: 0 30px
+  &-close
+    width: 24px
+    height: 24px
+    position: absolute
+    top: 10px
+    right: 10px
+    background: url(../img/svg/close.svg) no-repeat center
+    cursor: pointer
+    opacity: 0.4
+    transition: .2s
+    &:hover
+      opacity: 1
+  &-list
+    max-height: 290px
+    overflow: hidden
+    margin-top: 20px
+    li
+      padding: 10px 30px
+      cursor: pointer
+      transition: .2s
+      &:hover
+        background: #f3f3f3
+  &-message
+    position: absolute
+    top: 30px
+    right: 0
+    background: #fff
+    width: 310px
+    border-radius: 5px
+    padding: 15px
+    box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.09)
+    @include flexbox
+    align-items: center
+    justify-content: space-between
+    display: none
+    &::before
+      content: ''
+      position: absolute
+      top: -4px
+      right: 45px
+      width: 12px
+      height: 12px
+      background: #fff
+      transform: rotate(45deg)
+      z-index: -1
+      box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.09)
+    p
+      margin-bottom: 10px
+      cursor: auto
+    &__link
+      color: $color-queen-blue
+      border-bottom: 1px solid $color-queen-blue
+      font-size: 12px
+    &__btn
+      padding: 10px 12px
+      display: block
+      border-radius: 30px
+      font-size: 12px
+      color: #fff
+      background: $color-purple

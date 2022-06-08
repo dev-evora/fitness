@@ -276,14 +276,34 @@ $('.video').each(function (i, item) {
   );
 });
 
-const picker = new easepick.create({
-  element: '.event-filter__datepicker',
-  css: ['https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.css'],
-  zIndex: 10,
-  lang: 'ru-RU',
-  format: 'DD.MM.YYYY',
-  RangePlugin: {
-    tooltip: false,
-  },
-  plugins: ['RangePlugin'],
+if ($('.event-filter__datepicker').length) {
+  const picker = new easepick.create({
+    element: '.event-filter__datepicker',
+    css: ['https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.css'],
+    zIndex: 10,
+    lang: 'ru-RU',
+    format: 'DD.MM.YYYY',
+    RangePlugin: {
+      tooltip: false,
+    },
+    plugins: ['RangePlugin'],
+  });
+}
+
+if (!localStorage.getItem('city_message')) {
+  $('.city-message').css('display', 'flex');
+  $('.city-message__btn, .city-list li').on('click', () => {
+    $('.city-message').fadeOut(200);
+    localStorage.setItem('city_message', 'true');
+  });
+}
+
+$('.header-city p, .city-message__link').click(() => {
+  $('.city').fadeIn(200);
 });
+
+$('.city-list li').click(() => {
+  $('.city').fadeOut(200);
+});
+
+$('.city-list').overlayScrollbars({});
