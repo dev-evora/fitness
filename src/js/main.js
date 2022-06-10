@@ -160,45 +160,75 @@ if ($('.promo-slider').length) {
 }
 
 createSwiper('.find-event', {
-  slidesPerGroup: 4,
-  slidesPerView: 4,
+  slidesPerGroup: 3,
+  slidesPerView: 3,
   spaceBetween: 20,
+  breakpoints: {
+    1024: {
+      slidesPerGroup: 4,
+      slidesPerView: 4,
+    },
+  },
 });
 
 createSwiper('.find-trainer', {
-  slidesPerGroup: 2,
-  slidesPerView: 2,
-  grid: {
-    rows: 2,
-    fill: 'row',
-  },
+  slidesPerGroup: 1,
+  slidesPerView: 1,
   spaceBetween: 20,
+  breakpoints: {
+    1024: {
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
+    },
+  },
 });
 
 createSwiper('.find-dir', {
-  slidesPerGroup: 4,
-  slidesPerView: 4,
+  slidesPerGroup: 3,
+  slidesPerView: 3,
   grid: {
     rows: 2,
     fill: 'row',
   },
   spaceBetween: 20,
+  breakpoints: {
+    1024: {
+      slidesPerGroup: 4,
+      slidesPerView: 4,
+    },
+  },
 });
 
 createSwiper('.popular-slider', {
-  slidesPerGroup: 4,
-  slidesPerView: 4,
-  grid: {
-    rows: 2,
-    fill: 'row',
-  },
+  slidesPerGroup: 3,
+  slidesPerView: 3,
   spaceBetween: 20,
+  breakpoints: {
+    1024: {
+      slidesPerGroup: 4,
+      slidesPerView: 4,
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
+    },
+  },
 });
 
 createSwiper('.trainer-reviews', {
-  slidesPerGroup: 4,
-  slidesPerView: 4,
+  slidesPerGroup: 3,
+  slidesPerView: 3,
   spaceBetween: 20,
+  breakpoints: {
+    1024: {
+      slidesPerGroup: 4,
+      slidesPerView: 4,
+    },
+  },
 });
 
 createSwiper('.event-reviews', {
