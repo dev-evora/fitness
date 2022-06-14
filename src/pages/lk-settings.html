@@ -1,0 +1,46 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'ЛК - Настройки аккаунта' %}
+{% set home = false %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-xl">Татьяна Агарипова, добрый день!</h2>
+    <a href="#" class="btn btn-tg"><img src="img/svg/tg.svg" alt="">Чат поддержки тренера</a>
+    <ul class="tab-list">
+      <li><a href="#">Информация о вас</a></li>
+      <li><a href="#">Мои тренировки</a></li>
+      <li class="active"><a href="#">Настроить аккаунт</a></li>
+      <li><a href="#">Условия сотрудничества</a></li>
+    </ul>
+    <div class="lk-head">
+      <h3 class="title-lg">Настройки аккаунта</h3>
+    </div>
+  </div>
+</section>
+
+<section class="lk">
+  <div class="container">
+    <form action="#" method="post" class="lk-setting-form">
+      <p>ФИО</p>
+      <input type="text" placeholder="Фамилия" class="input" />
+      <input type="text" placeholder="Имя" class="input" />
+      <input type="text" placeholder="Отчество" class="input" />
+      <p>Контактные данные</p>
+      <input type="tel" placeholder="Телефон" class="input masked" />
+      <input type="email" placeholder="E-mail" class="input" />
+      <p>Смена пароля</p>
+      <input type="password" placeholder="Текущий пароль" class="input" />
+      <input type="password" placeholder="Новый пароль" class="input" />
+      <input type="password" placeholder="Повторите новый пароль" class="input" />
+      <button class="btn btn-purple">Сохранить</button>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

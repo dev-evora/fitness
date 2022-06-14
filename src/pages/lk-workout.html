@@ -1,0 +1,43 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'ЛК - Мои тренировки' %}
+{% set home = false %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-xl">Татьяна Агарипова, добрый день!</h2>
+    <a href="#" class="btn btn-tg"><img src="img/svg/tg.svg" alt="">Чат поддержки тренера</a>
+    <ul class="tab-list">
+      <li><a href="#">Информация о вас</a></li>
+      <li class="active"><a href="#">Мои тренировки</a></li>
+      <li><a href="#">Настроить аккаунт</a></li>
+      <li><a href="#">Условия сотрудничества</a></li>
+    </ul>
+    <div class="lk-head">
+      <h3 class="title-lg">Мои тренировки</h3>
+      <p>На этой странице вы видите все свои тренировки.<br> Добавление, изменение, удаление тренировок проходит модерацию, поэтому для обновления информации потребуется до 2 дней</p>
+      <a href="#" class="btn btn-outline">+ Добавить тренировку</a>
+    </div>
+  </div>
+</section>
+
+<section class="lk">
+  <div class="container">
+    <h2 class="title-lg lk-title-content">Активные тренировки</h2>
+    <div class="grid">
+      {% include 'common/lk-event-item.html' %}
+      {% include 'common/lk-event-item.html' %}
+      {% include 'common/lk-event-item.html' %}
+      {% include 'common/lk-event-item.html' %}
+      {% include 'common/lk-event-item.html' %}
+      {% include 'common/lk-event-item.html' %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

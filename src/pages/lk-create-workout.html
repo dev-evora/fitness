@@ -1,0 +1,285 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'ЛК - Добавить/изменить тренировку' %}
+{% set home = false %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-xl">Татьяна Агарипова, добрый день!</h2>
+    <a href="#" class="btn btn-tg"><img src="img/svg/tg.svg" alt="">Чат поддержки тренера</a>
+    <ul class="tab-list">
+      <li><a href="#">Информация о вас</a></li>
+      <li><a href="#">Мои тренировки</a></li>
+      <li><a href="#">Настроить аккаунт</a></li>
+      <li><a href="#">Условия сотрудничества</a></li>
+    </ul>
+    <div class="lk-head">
+      <h3 class="title-lg">Добавление тренировки</h3>
+    </div>
+  </div>
+</section>
+
+<section class="lk">
+  <div class="container">
+    <form action="#" method="post" class="lk-workout-form">
+      <div class="lk-workout-section">
+        <label>
+          <p>Введите короткое название тренировки</p>
+          <span>например “Растяжка для мышц спины и ног”</span>
+          <input type="text" class="input" placeholder="Введите название" />
+          <small>не более 80 символов</small>
+        </label>
+        <label>
+          <p>Добавьте подробное описание тренировки</p>
+          <textarea class="textarea" placeholder="Описание"></textarea>
+          <small>не более 1500 символов</small>
+        </label>
+      </div>
+      <div class="lk-workout-section">
+        <h3 class="title-lg">Подробнее о тренировке</h3>
+        <label>
+          <div class="lead-select">
+            <input class="lead-select__input" placeholder="Выберите направление(ия)" disabled />
+            <div class="lead-select__open"></div>
+            <div class="lead-select__dropdown">
+              <div class="lead-select__check">Выделить: <span>выбрать все</span></div>
+              <div class="lead-select__content">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Фитнес</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Оздоровительные</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Командные</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Зимний спорт</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Танцы</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Единоборства</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Спортивное питание</p>
+                </label>
+              </div>
+              <div class="btn-wrap"><a href="javascript:;" class="btn btn-sm btn-outline">Применить</a></div>
+            </div>
+          </div>
+        </label>
+        <label>
+          <div class="lead-select">
+            <input class="lead-select__input" placeholder="Вид спорта" disabled />
+            <div class="lead-select__open"></div>
+            <div class="lead-select__dropdown">
+              <div class="lead-select__check">Выделить: <span>выбрать все</span></div>
+              <div class="lead-select__content">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Волейбол</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Баскетбол</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Гандбол</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Еще вариант</p>
+                </label>
+              </div>
+              <div class="btn-wrap"><a href="javascript:;" class="btn btn-sm btn-outline">Применить</a></div>
+            </div>
+          </div>
+        </label>
+        <label>
+          <p>Вашего направления или вида тренировки нет в списке? Напишите, мы добавим.</p>
+          <input type="text" class="input" placeholder="Введите направление или вид" />
+        </label>
+        <label>
+          <div class="lead-select">
+            <input class="lead-select__input" placeholder="Возраст участников" disabled />
+            <div class="lead-select__open"></div>
+            <div class="lead-select__dropdown">
+              <div class="lead-select__check">Выделить: <span>выбрать все</span></div>
+              <div class="lead-select__content">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Вариант</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Вариант</p>
+                </label>
+              </div>
+              <div class="btn-wrap"><a href="javascript:;" class="btn btn-sm btn-outline">Применить</a></div>
+            </div>
+          </div>
+        </label>
+        <label>
+          <p>Укажите длительность тренировки или курса</p>
+          <span>Например, 30 мин; 60 мин или курс 2 недели</span>
+          <input type="text" class="input" placeholder="Введите длительность" />
+        </label>
+        <label>
+          <div class="lead-select">
+            <input class="lead-select__input" placeholder="Уровень участников" disabled />
+            <div class="lead-select__open"></div>
+            <div class="lead-select__dropdown">
+              <div class="lead-select__check">Выделить: <span>выбрать все</span></div>
+              <div class="lead-select__content">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Начинающий</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Средний уровень</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Продвинутый уровень</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Профессионал</p>
+                </label>
+              </div>
+              <div class="btn-wrap"><a href="javascript:;" class="btn btn-sm btn-outline">Применить</a></div>
+            </div>
+          </div>
+        </label>
+        <label>
+          <div class="lead-select">
+            <input class="lead-select__input" placeholder="Тип тренировки" disabled />
+            <div class="lead-select__open"></div>
+            <div class="lead-select__dropdown">
+              <div class="lead-select__check">Выделить: <span>выбрать все</span></div>
+              <div class="lead-select__content">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Вариант</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Вариант</p>
+                </label>
+              </div>
+              <div class="btn-wrap"><a href="javascript:;" class="btn btn-sm btn-outline">Применить</a></div>
+            </div>
+          </div>
+        </label>
+        <label>
+          <div class="lead-select">
+            <input class="lead-select__input" placeholder="Онлайн / офлайн" disabled />
+            <div class="lead-select__open"></div>
+            <div class="lead-select__dropdown">
+              <div class="lead-select__check">Выделить: <span>выбрать все</span></div>
+              <div class="lead-select__content">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Онлайн</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Офлайн</p>
+                </label>
+              </div>
+              <div class="btn-wrap"><a href="javascript:;" class="btn btn-sm btn-outline">Применить</a></div>
+            </div>
+          </div>
+        </label>
+        <label>
+          <div class="lead-select">
+            <input class="lead-select__input" placeholder="Город проведения тренировки" disabled />
+            <div class="lead-select__open"></div>
+            <div class="lead-select__dropdown">
+              <div class="lead-select__check">Выделить: <span>выбрать все</span></div>
+              <div class="lead-select__content">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Санкт-Петербург</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Москва</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Еще вариант</p>
+                </label>
+              </div>
+              <div class="btn-wrap"><a href="javascript:;" class="btn btn-sm btn-outline">Применить</a></div>
+            </div>
+          </div>
+        </label>
+        <label>
+          <p>Укажите адрес проведения тренировки, если тренировка офлайн</p>
+          <input type="text" class="input" placeholder="Улица, дом, название фитнес-клуба" />
+        </label>
+        <label>
+          <p>Что потребуется для тренировки?</p>
+          <input type="text" class="input" placeholder="Например, гантели или штанга" />
+        </label>
+        <label>
+          <p>Добавьте фотографии тренировки</p>
+          <span>Минимум 1 фото</span>
+        </label>
+        <label>
+          <p>Укажите стоимость за тренировку / курс</p>
+          <input type="text" class="input" placeholder="Введите сумму" />
+        </label>
+        <label>
+          <p>Укажите период проведения, если есть жесткие даты начала и окончания</p>
+          <input class="event-filter__datepicker" placeholder="Выбрать дату или период" />
+          {# datepicker: https://easepick.com/ #}
+        </label>
+        <label>
+          <p>Если ли возрастные ограничения к участникам, то укажите их.</p>
+          <textarea class="textarea" placeholder="Например, тренировка для детей от 3 до 6 лет или возраст 60+"></textarea>
+        </label>
+        <label>
+          <div class="lead-select">
+            <input class="lead-select__input" placeholder="Какие можете предложить акции?" disabled />
+            <div class="lead-select__open"></div>
+            <div class="lead-select__dropdown">
+              <div class="lead-select__check">Выделить: <span>выбрать все</span></div>
+              <div class="lead-select__content">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Вариант</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Вариант</p>
+                </label>
+              </div>
+              <div class="btn-wrap"><a href="javascript:;" class="btn btn-sm btn-outline">Применить</a></div>
+            </div>
+          </div>
+        </label>
+        <button class="btn btn-purple">Завершить</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+{% endblock %}
