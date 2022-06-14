@@ -363,3 +363,13 @@ $('.city-list li, .city-close, .city-overlay').click(() => {
 });
 
 $('.city-list').overlayScrollbars({});
+
+$('.event-sidebar__popup-close').click(function () {
+  $('.event-sidebar__popup').fadeOut(200);
+  $('html, body').removeAttr('style');
+});
+
+$('.event-sidebar__popup-open').click(function () {
+  $('.event-sidebar__popup').fadeIn(200);
+  $('html, body').css('overflow', 'hidden');
+});

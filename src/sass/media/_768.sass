@@ -139,3 +139,56 @@
     width: 100%
   .event-free
     margin-left: 0
+
+  .event-sidebar__popup
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 99999
+    display: none
+    &-content
+      padding: 30px 20px
+      background: #fff
+      overflow-y: scroll
+      height: calc(100% - 60px)
+      .event-filter:first-child
+        border: 0
+        padding-top: 0
+    &-close
+      height: 60px
+      width: 100%
+      background: rgba(0,0,0,.3)
+      @include flexbox
+      align-items: center
+      justify-content: center
+      p
+        padding: 10px 25px
+        border-radius: 20px
+        background: $color-purple
+        color: #fff
+        font-size: 12px
+
+  .event-filter__content
+    max-height: 10000px
+
+  .event .container
+    z-index: initial
+
+  .event-sidebar__pc
+    display: none
+  .event-sidebar__mob
+    display: block
+    .btn-wrap
+      justify-content: center
+      margin-bottom: 20px
+
+  .event-head__select
+    z-index: 100
+    position: relative
+    text-align: center
+    text-align: -webkit-center
+    width: 100%
+    background: #fff
+    height: 30px

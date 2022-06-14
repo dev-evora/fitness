@@ -42,8 +42,15 @@
     <div class="event-row">
       <div class="event-head">
         <div class="event-sidebar">
-          Найдено результатов: 32
-          <div class="btn-wrap"><div class="event-head__clear">Очистить фильтр</div></div>
+          <div class="event-sidebar__pc">
+            Найдено результатов: 32
+            <div class="btn-wrap"><div class="event-head__clear">Очистить фильтр</div></div>
+          </div>
+          <div class="event-sidebar__mob">
+            <div class="btn-wrap">
+              <div class="btn btn-purple event-sidebar__popup-open">Открыть фильтр</div>
+            </div>
+          </div>
         </div>
         <div class="event-main">
           <select class="event-head__select">
@@ -56,115 +63,118 @@
           </select>
         </div>
       </div>
-      <div class="event-sidebar">
-        <div class="event-filter">
-          <div class="event-filter__title">Тип тренировки</div>
-          <div class="event-filter__content">
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>Индивидуальное занятие</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>Групповое</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>Онлайн</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>Офлайн</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>Для детей</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>Для взрослых</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>Для взрослых детьми</p>
-            </label>
+      <div class="event-sidebar event-sidebar__popup">
+        <div class="event-sidebar__popup-close"><p>закрыть</p></div>
+        <div class="event-sidebar__popup-content">
+          <div class="event-filter">
+            <div class="event-filter__title">Тип тренировки</div>
+            <div class="event-filter__content">
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>Индивидуальное занятие</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>Групповое</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>Онлайн</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>Офлайн</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>Для детей</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>Для взрослых</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>Для взрослых детьми</p>
+              </label>
+            </div>
           </div>
-        </div>
-        <div class="event-filter">
-          <div class="event-filter__title">Длительность</div>
-          <div class="event-filter__content">
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>30 мин</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>60 мин</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>90 мин</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>120 мин</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>160 мин</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>230 мин</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>240 мин</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>250 мин</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>и т.д.</p>
-            </label>
+          <div class="event-filter">
+            <div class="event-filter__title">Длительность</div>
+            <div class="event-filter__content">
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>30 мин</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>60 мин</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>90 мин</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>120 мин</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>160 мин</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>230 мин</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>240 мин</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>250 мин</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>и т.д.</p>
+              </label>
+            </div>
           </div>
-        </div>
-        <div class="event-filter">
-          <div class="event-filter__title">Цена</div>
-          <input type="text" class="event-filter__price" data-type="double" data-min="0" data-max="20000" data-step="100" />
-          <div class="event-filter__subtitle">от <span id="price-min"></span> р до <span id="price-max"></span> р</div>
-        </div>
-        <div class="event-filter">
-          <div class="event-filter__title">Дата начала</div>
-          <input class="event-filter__datepicker" placeholder="Выбрать дату или период" />
-          {# datepicker: https://easepick.com/ #}
-        </div>
-        <div class="event-filter">
-          <div class="event-filter__title">Рейтинг тренировки</div>
-          <input type="text" class="event-filter__rating" data-type="double" data-min="0" data-max="10" data-step="1" />
-          <div class="event-filter__subtitle">от <span id="rating-min"></span> до <span id="rating-max"></span></div>
-        </div>
-        <div class="event-filter">
-          <div class="event-filter__title">Ваш уровень</div>
-          <div class="event-filter__content">
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>Начинающий</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>Средний уровень</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>Продвинутый уровень</p>
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" />
-              <p>Профессионал</p>
-            </label>
+          <div class="event-filter">
+            <div class="event-filter__title">Цена</div>
+            <input type="text" class="event-filter__price" data-type="double" data-min="0" data-max="20000" data-step="100" />
+            <div class="event-filter__subtitle">от <span id="price-min"></span> р до <span id="price-max"></span> р</div>
+          </div>
+          <div class="event-filter">
+            <div class="event-filter__title">Дата начала</div>
+            <input class="event-filter__datepicker" placeholder="Выбрать дату или период" />
+            {# datepicker: https://easepick.com/ #}
+          </div>
+          <div class="event-filter">
+            <div class="event-filter__title">Рейтинг тренировки</div>
+            <input type="text" class="event-filter__rating" data-type="double" data-min="0" data-max="10" data-step="1" />
+            <div class="event-filter__subtitle">от <span id="rating-min"></span> до <span id="rating-max"></span></div>
+          </div>
+          <div class="event-filter">
+            <div class="event-filter__title">Ваш уровень</div>
+            <div class="event-filter__content">
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>Начинающий</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>Средний уровень</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>Продвинутый уровень</p>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                <p>Профессионал</p>
+              </label>
+            </div>
           </div>
         </div>
       </div>
