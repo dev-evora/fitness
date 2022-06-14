@@ -359,8 +359,25 @@
         width: calc(100% / 2 - 20px)
         margin: 20px 10px 0
 
-// .event-sidebar__overlay p
-//   display: none
+  &-desc
+    @include flexbox
+    align-items: flex-start
+    &__img
+      width: 290px
+      height: 180px
+      border-radius: 4px
+      object-fit: cover
+      object-position: center
+    &__text
+      width: 500px
+      padding-right: 15px
+      height: 180px
+      margin-left: 30px
+      p:first-child
+        margin-top: 0
+
+.event-sidebar__popup-close p
+  display: none
 
 .event-sidebar__mob
   display: none

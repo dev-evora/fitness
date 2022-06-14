@@ -377,3 +377,5 @@ $('.event-sidebar__popup-open').click(function () {
 $('.header-burger').click(function () {
   $('.header-nav').toggleClass('active');
 });
+
+$('.event-desc__text').overlayScrollbars({});
