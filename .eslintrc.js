@@ -1,14 +1,14 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'es2021': true,
-    'jquery': true,
+  env: {
+    browser: true,
+    es2021: true,
+    jquery: true,
   },
-  'extends': ['eslint:recommended', 'google'],
-  'parserOptions': {
-    'ecmaVersion': 'latest',
+  extends: ['eslint:recommended', 'google'],
+  parserOptions: {
+    ecmaVersion: 'latest',
   },
-  'rules': {
+  rules: {
     'no-unused-vars': 'off',
     'no-console': 'warn',
     'no-undef': 'off',
@@ -18,5 +18,5 @@ module.exports = {
     'max-len': 'off',
     'linebreak-style': 0,
   },
-  'ignorePatterns': ['gulpfile.js', 'app', 'dev/js/libs'],
+  ignorePatterns: ['gulpfile.js', 'app', 'dev/js/libs'],
 };
