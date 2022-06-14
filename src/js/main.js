@@ -373,3 +373,7 @@ $('.event-sidebar__popup-open').click(function () {
   $('.event-sidebar__popup').fadeIn(200);
   $('html, body').css('overflow', 'hidden');
 });
+
+$('.header-burger').click(function () {
+  $('.header-nav').toggleClass('active');
+});

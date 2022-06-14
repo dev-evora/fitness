@@ -10,8 +10,6 @@
     flex: 1
   .header
     padding: 20px 0
-  .header-nav
-    display: none
   .header-login
     width: 36px
     height: 36px
@@ -105,3 +103,22 @@
     max-width: 100%
   .promo-content p
     margin: 20px 0 40px
+
+  .header-nav
+    position: absolute
+    z-index: 1000
+    top: 46px
+    right: -100%
+    width: 180px
+    background: #fff
+    flex-direction: column
+    font-size: 14px
+    padding-bottom: 25px
+    border-radius: 10px
+    box-shadow: 0 5px 15px 5px rgba(0,0,0,.1)
+    transition: .3s
+    li
+      margin-right: 0
+      margin-top: 25px
+    &.active
+      right: 10px
