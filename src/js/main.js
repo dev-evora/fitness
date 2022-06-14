@@ -160,10 +160,14 @@ if ($('.promo-slider').length) {
 }
 
 createSwiper('.find-event', {
-  slidesPerGroup: 3,
-  slidesPerView: 3,
+  slidesPerGroup: 2,
+  slidesPerView: 2,
   spaceBetween: 20,
   breakpoints: {
+    768: {
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+    },
     1024: {
       slidesPerGroup: 4,
       slidesPerView: 4,
@@ -188,14 +192,18 @@ createSwiper('.find-trainer', {
 });
 
 createSwiper('.find-dir', {
-  slidesPerGroup: 3,
-  slidesPerView: 3,
-  grid: {
-    rows: 2,
-    fill: 'row',
-  },
+  slidesPerGroup: 2,
+  slidesPerView: 2,
   spaceBetween: 20,
   breakpoints: {
+    768: {
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
+    },
     1024: {
       slidesPerGroup: 4,
       slidesPerView: 4,
@@ -204,10 +212,14 @@ createSwiper('.find-dir', {
 });
 
 createSwiper('.popular-slider', {
-  slidesPerGroup: 3,
-  slidesPerView: 3,
+  slidesPerGroup: 2,
+  slidesPerView: 2,
   spaceBetween: 20,
   breakpoints: {
+    768: {
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+    },
     1024: {
       slidesPerGroup: 4,
       slidesPerView: 4,
@@ -220,10 +232,14 @@ createSwiper('.popular-slider', {
 });
 
 createSwiper('.trainer-reviews', {
-  slidesPerGroup: 3,
-  slidesPerView: 3,
+  slidesPerGroup: 1,
+  slidesPerView: 1,
   spaceBetween: 20,
   breakpoints: {
+    768: {
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+    },
     1024: {
       slidesPerGroup: 4,
       slidesPerView: 4,
@@ -232,9 +248,15 @@ createSwiper('.trainer-reviews', {
 });
 
 createSwiper('.event-reviews', {
-  slidesPerGroup: 3,
-  slidesPerView: 3,
+  slidesPerGroup: 1,
+  slidesPerView: 1,
   spaceBetween: 20,
+  breakpoints: {
+    768: {
+      slidesPerGroup: 3,
+      slidesPerView: 3,
+    },
+  },
 });
 
 /*
@@ -332,7 +354,7 @@ $('.header-city p, .city-message__link').click(() => {
   $('.city').fadeIn(200);
 });
 
-$('.city-list li').click(() => {
+$('.city-list li, .city-close, .city-overlay').click(() => {
   $('.city').fadeOut(200);
 });
 
