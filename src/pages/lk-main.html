@@ -54,7 +54,7 @@
             </div>
           </div>
         </div>
-        <div class="btn-wrap"><a href="#" class="btn btn-outline">Изменить фото</a></div>
+        <div class="btn-wrap"><a href="javascript:;" data-fancybox data-src="#popup-photo" class="btn btn-outline">Изменить фото</a></div>
       </div>
       <div class="lk-content">
         <div class="lk-section">
@@ -75,7 +75,7 @@
         <div class="lk-section">
           <div class="lk-top">
             <h3 class="lk-title">Мое местоположение</h3>
-            <a href="#" class="lk-edit">Изменить</a>
+            <a href="javascript:;" data-fancybox data-src="#popup-about" class="lk-edit">Изменить</a>
           </div>
           <h4 class="lk-city">Санкт-Петербург</h4>
           <div class="lk-top">
@@ -101,7 +101,7 @@
         <div class="lk-section">
           <div class="lk-top">
             <h3 class="lk-title">Образование</h3>
-            <a href="#" class="lk-edit">Изменить</a>
+            <a href="javascript:;" data-fancybox data-src="#popup-edu" class="lk-edit">Изменить</a>
           </div>
           <div class="lk-text">
             <ul>
@@ -118,7 +118,7 @@
         <div class="lk-section">
           <div class="lk-top">
             <h3 class="lk-title">Соц сети</h3>
-            <a href="#" class="lk-edit">Изменить</a>
+            <a href="javascript:;" data-fancybox data-src="#popup-contact" class="lk-edit">Изменить</a>
           </div>
           <div class="lk-text">
             <p><a href="#">@akkaunt_telegram</a></p>
@@ -142,5 +142,107 @@
     </div>
   </div>
 </section>
+
+<div class="popup popup-lk" id="popup-photo">
+  <h3 class="title-lg">Изменить фото</h3>
+  <form action="#" method="post">
+    <label>
+      <p>Добавьте основное фото профиля</p>
+      <label class="file">
+        <input type="file" />
+        <p>+ Выбрать файл</p>
+      </label>
+      <span>1 фото</span>
+    </label>
+    <label>
+      <p>Дополнительные фото</p>
+      <label class="file">
+        <input type="file" multiple="multiple" />
+        <p>+ Выбрать файлы</p>
+      </label>
+      <span>До 10 фото</span>
+    </label>
+    <button class="btn btn-purple">Внести изменения</button>
+  </form>
+</div>
+
+<div class="popup popup-lk" id="popup-about">
+  <h3 class="title-lg">Изменить данные о себе</h3>
+  <form action="#" method="post">
+    <label>
+      <div class="lead-select">
+        <input class="lead-select__input" placeholder="Ваше местоположение" disabled />
+        <div class="lead-select__open"></div>
+        <div class="lead-select__dropdown">
+          <div class="lead-select__check">Выделить: <span>выбрать все</span></div>
+          <div class="lead-select__content">
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>Санкт-Петербург</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>Москва</p>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" />
+              <p>Еще вариант</p>
+            </label>
+          </div>
+          <div class="btn-wrap"><a href="javascript:;" class="btn btn-sm btn-outline">Применить</a></div>
+        </div>
+      </div>
+    </label>
+    <label>
+      <textarea class="textarea" placeholder="Опишите опыт и достижения"></textarea>
+    </label>
+    <label>
+      <textarea class="textarea" placeholder="Расскажите о себе"></textarea>
+    </label>
+    <button class="btn btn-purple">Внести изменения</button>
+  </form>
+</div>
+
+<div class="popup popup-lk" id="popup-edu">
+  <h3 class="title-lg">Изменить данные об образовании</h3>
+  <form action="#" method="post">
+    <label>
+      <p>Когда и где обучались</p>
+      <textarea class="textarea" placeholder="Например, в 2020 окончил Московский городской педагогический университет по специальности Технологии спортивной подготовки"></textarea>
+    </label>
+    <label>
+      <p>Приложите документы и сертификаты об образовании</p>
+      <label class="file">
+        <input type="file" multiple="multiple" />
+        <p>+ Выбрать файлы</p>
+      </label>
+      <span>формат PDF, JPG или PNG</span>
+    </label>
+    <button class="btn btn-purple">Внести изменения</button>
+  </form>
+</div>
+
+<div class="popup popup-lk" id="popup-contact">
+  <h3 class="title-lg">Изменить данные</h3>
+  <form action="#" method="post">
+    <label>
+      <p>Добавьте видео о вас или ваших тренировках длительностью до 20 минут</p>
+      <textarea class="textarea" placeholder="Укажите ссылки"></textarea>
+    </label>
+    <label>
+      <p>Добавьте ссылки на ваши соц.сети</p>
+      <textarea class="textarea" placeholder="Например, вконтакте"></textarea>
+    </label>
+    <label>
+      <p>Укажите данные лицевого счёта для денежных расчётов</p>
+      <textarea class="textarea" placeholder="Введите  платежные реквизиты"></textarea>
+    </label>
+    <button class="btn btn-purple">Внести изменения</button>
+  </form>
+</div>
+
+<div class="popup" id="popup-send">
+  <h3 class="title-lg">Запрос на изменение данных отправлен администратору</h3>
+</div>
 
 {% endblock %}
