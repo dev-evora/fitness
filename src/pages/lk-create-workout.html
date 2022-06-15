@@ -276,10 +276,16 @@
             </div>
           </div>
         </label>
-        <button class="btn btn-purple">Завершить</button>
+        {# data-fancybox data-src="#popup-workout" вызывается после отправки, ниже вставил для демки #}
+        <button data-fancybox data-src="#popup-workout" class="btn btn-purple">Завершить</button>
       </div>
     </form>
   </div>
 </section>
+
+<div class="popup" id="popup-workout">
+  <h3 class="title-lg">Запрос на добавление тренировки отправлен администратору</h3>
+  <h4 class="title-xs">Вся информация проходит модерацию, поэтому для обновления информации потребуется до 2 дней</h4>
+</div>
 
 {% endblock %}
