@@ -1,0 +1,131 @@
+{% extends 'common/_layout.html' %}
+{% set site_title = 'ЛК - Страница после регистрации' %}
+{% set home = false %}
+
+{% block content %}
+
+<section class="head">
+  <div class="container">
+    <ul class="head-breadcrumbs">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">{{ site_title }}</a></li>
+    </ul>
+    <h2 class="title-xl">Татьяна Агарипова, добрый день!</h2>
+    <a href="#" class="btn btn-tg"><img src="img/svg/tg.svg" alt="">Чат поддержки тренера</a>
+    <ul class="tab-list">
+      <li><a href="#">Информация о вас</a></li>
+      <li><a href="#">Мои тренировки</a></li>
+      <li><a href="#">Настроить аккаунт</a></li>
+      <li><a href="#">Условия сотрудничества</a></li>
+    </ul>
+    <div class="lk-head">
+      <h3 class="title-lg">Расскажите о себе</h3>
+    </div>
+  </div>
+</section>
+
+<section class="lk">
+  <div class="container">
+    <form action="#" method="post" class="lk-workout-form">
+      <div class="lk-workout-section">
+        <label>
+          <input type="text" class="input" placeholder="Фамилия" />
+        </label>
+        <label>
+          <input type="text" class="input" placeholder="Имя" />
+        </label>
+        <label>
+          <input type="text" class="input" placeholder="Отчество" />
+        </label>
+        <label>
+          <p>Добавьте основное фото профиля</p>
+          <label class="file">
+            <input type="file" />
+            <p>+ Выбрать файл</p>
+          </label>
+          <span>1 фото</span>
+        </label>
+        <label>
+          <p>Дополнительные фото</p>
+          <label class="file">
+            <input type="file" multiple="multiple" />
+            <p>+ Выбрать файлы</p>
+          </label>
+          <span>До 10 фото</span>
+        </label>
+        <label>
+          <input type="text" class="input" placeholder="Рабочий стаж" />
+        </label>
+        <label>
+          <textarea class="textarea" placeholder="Опишите опыт и достижения"></textarea>
+        </label>
+        <label>
+          <textarea class="textarea" placeholder="Расскажите о себе"></textarea>
+        </label>
+      </div>
+      <div class="lk-workout-section">
+        <h3 class="title-lg">Расскажите о вашем образовании</h3>
+        <label>
+          <p>Когда и где обучались</p>
+          <textarea class="textarea" placeholder="Например, в 2020 окончил Московский городской педагогический университет по специальности Технологии спортивной подготовки"></textarea>
+        </label>
+        <label>
+          <p>Приложите документы и сертификаты об образовании</p>
+          <label class="file">
+            <input type="file" multiple="multiple" />
+            <p>+ Выбрать файлы</p>
+          </label>
+          <span>формат PDF, JPG или PNG</span>
+        </label>
+      </div>
+      <div class="lk-workout-section">
+        <h3 class="title-lg">Подробнее</h3>
+        <label>
+          <div class="lead-select">
+            <input class="lead-select__input" placeholder="Ваше местоположение" disabled />
+            <div class="lead-select__open"></div>
+            <div class="lead-select__dropdown">
+              <div class="lead-select__check">Выделить: <span>выбрать все</span></div>
+              <div class="lead-select__content">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Санкт-Петербург</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Москва</p>
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <p>Еще вариант</p>
+                </label>
+              </div>
+              <div class="btn-wrap"><a href="javascript:;" class="btn btn-sm btn-outline">Применить</a></div>
+            </div>
+          </div>
+        </label>
+        <label>
+          <p>Добавьте видео о вас или ваших тренировках длительностью до 20 минут</p>
+          <textarea class="textarea" placeholder="Укажите ссылки"></textarea>
+        </label>
+        <label>
+          <p>Добавьте ссылки на ваши соц.сети</p>
+          <textarea class="textarea" placeholder="Например, вконтакте"></textarea>
+        </label>
+        <label>
+          <p>Укажите данные лицевого счёта для денежных расчётов</p>
+          <textarea class="textarea" placeholder="Введите  платежные реквизиты"></textarea>
+        </label>
+        {# data-fancybox data-src="#popup-success" вызывается после отправки, ниже вставил для демки #}
+        <button data-fancybox data-src="#popup-success" class="btn btn-purple">Завершить</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="popup" id="popup-success">
+  <h3 class="title-lg">Ваш личный кабинет создан</h3>
+  <h4 class="title-xs">Вся информация проходит модерацию, поэтому для обновления информации в личном кабинете потребуется до 2 дней</h4>
+</div>
+
+{% endblock %}
