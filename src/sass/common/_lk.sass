@@ -78,6 +78,83 @@
       .btn-purple
         margin-top: 40px
 
+  &-row
+    @include flexbox
+    align-items: flex-start
+  &-sidebar
+    width: 290px
+    .btn-wrap
+      justify-content: center
+      margin-top: 30px
+  &-content
+    width: calc(100% - 290px - 30px)
+    margin-left: auto
+  &-section
+    padding: 40px 0
+    border-top: 1px solid #E3E3E3
+    &:first-child
+      border: 0
+      padding-top: 0
+    &:last-child
+      padding-bottom: 0
+    .title-md
+      margin-bottom: 10px
+      margin-top: 40px
+      &:first-child
+        margin-top: 0
+  &-top
+    @include flexbox
+    align-items: center
+    margin-bottom: 10px
+    margin-top: 40px
+    &:first-child
+      margin-top: 0
+  &-title
+    font-size: 16px
+    font-weight: 400
+  &-edit
+    color: $color-queen-blue
+    border-bottom: 1px solid $color-queen-blue
+    transition: .2s
+    margin-left: auto
+    &:hover
+      color: $color-purple
+      border-bottom: 1px solid $color-purple
+  &-year
+    font-size: 14px
+    color: $color-queen-blue
+    margin-left: 15px
+  &-text
+    line-height: 1.4
+    ul
+      list-style: disc
+      padding-left: 15px
+    ul, p
+      margin-top: 10px
+      &:first-child
+        margin-top: 0
+    a
+      color: $color-queen-blue
+      border-bottom: 1px solid $color-queen-blue
+      transition: .2s
+      &:hover
+        color: $color-purple
+        border-bottom: 1px solid $color-purple
+  &-city, &-fio
+    margin-bottom: 40px
+    font-size: 18px
+    font-weight: 700
+  &-id
+    color: $color-queen-blue
+    &__info
+      color: #9b9b9b
+  &-phone
+    font-size: 18px
+    font-weight: 700
+  &-email
+    margin-top: 10px
+    font-size: 16px
+
 .file
   padding: 10px 15px
   border: 1px dashed $color-black
