@@ -379,3 +379,21 @@ $('.header-burger').click(function () {
 });
 
 $('.event-desc__text').overlayScrollbars({});
+
+const uploadFile = () => {
+  const limit = 10;
+  $('#image').change(function () {
+    const files = $(this)[0].files;
+    const filesLength = files.length;
+    if (filesLength > limit) {
+      alert('Не больше ' + limit + ' фотографий');
+      $('#image').val('');
+      return false;
+    } else {
+      $('.file p').text('Выбрано файлов: ' + filesLength);
+      return true;
+    }
+  });
+};
+
+uploadFile();
