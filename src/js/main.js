@@ -382,17 +382,19 @@ $('.event-desc__text').overlayScrollbars({});
 
 const uploadFile = () => {
   const limit = 10;
-  $('#image').change(function () {
-    const files = $(this)[0].files;
-    const filesLength = files.length;
-    if (filesLength > limit) {
-      alert('Не больше ' + limit + ' фотографий');
-      $('#image').val('');
-      return false;
-    } else {
-      $('.file p').text('Выбрано файлов: ' + filesLength);
-      return true;
-    }
+  $('.file').each(function (i, item) {
+    $('> input', item).change(function () {
+      const files = $(this)[0].files;
+      const filesLength = files.length;
+      if (filesLength > limit) {
+        alert('Не больше ' + limit + ' фотографий');
+        $('> input', item).val('');
+        return false;
+      } else {
+        $('> p', item).text('Выбрано файлов: ' + filesLength);
+        return true;
+      }
+    });
   });
 };
 
