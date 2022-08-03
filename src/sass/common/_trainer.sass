@@ -46,6 +46,14 @@
       font-weight: 700
       color: $color-purple
       max-width: calc(100% - 60px)
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 5
     .rating
       margin-left: auto
   &-price
@@ -114,6 +122,7 @@
       overflow: hidden
   &-type
     position: relative
+    z-index: 10
     margin-bottom: 30px
     @include flexbox
     align-items: center
