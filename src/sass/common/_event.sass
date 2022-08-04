@@ -386,6 +386,37 @@
     color: #fff
     border-radius: 20px
 
+  &-action
+    @include flexbox
+    align-items: flex-start
+    margin: 0 -10px
+    &__item
+      width: calc(100% / 4 - 20px)
+      margin: 20px 10px 0
+      border-radius: 4px
+      position: relative
+      height: 170px
+      background: #eee
+      @include flexbox
+      align-items: center
+      justify-content: center
+      padding: 30px
+      h2
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        text-align: center
+        font-size: 160px
+        font-weight: 700
+        line-height: 170px
+      h3
+        font-size: 24px
+        line-height: 1.4
+        color: #fff
+        position: relative
+        z-index: 1
+
 .event-sidebar__popup-close p
   display: none
 
