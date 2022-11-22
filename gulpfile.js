@@ -37,7 +37,7 @@ const styles = () => {
 const libs = () => {
   return src([
     'src/js/vendor/jquery.fancybox.min.js',
-    'src/js/vendor/swiper-bundle.min.js',
+    'src/js/vendor/swiper-bundle-7.min.js',
     'src/js/vendor/jquery.inputmask.min.js',
     'src/js/vendor/jquery.overlayScrollbars.min.js',
     'src/js/vendor/ion.rangeSlider.min.js',
